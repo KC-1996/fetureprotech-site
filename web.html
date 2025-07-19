@@ -1,0 +1,86 @@
+# Create additional HTML pages for the FetureProTech IT support website
+
+# Define the common header and footer
+header = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FetureProTech - IT Support</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header, footer { background-color: #003366; color: white; padding: 1em; text-align: center; }
+        nav a { margin: 0 15px; color: white; text-decoration: none; }
+        section { padding: 2em; }
+        h1 { color: #003366; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>FetureProTech</h1>
+    <nav>
+        <a href="fetureprotech_homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+"""
+
+footer = """
+<footer>
+    <p>&copy; 2025 FetureProTech. All rights reserved.</p>
+</footer>
+</body>
+</html>
+"""
+
+# Define content for each page
+about_content = """
+<section>
+    <h1>About Us</h1>
+    <p>FetureProTech is a leading IT support company dedicated to providing reliable and innovative technology solutions for businesses of all sizes. Our mission is to empower organizations through expert IT services, ensuring seamless operations and enhanced productivity.</p>
+    <p>Our team of certified professionals brings years of experience in network management, cybersecurity, cloud solutions, and technical support.</p>
+</section>
+"""
+
+services_content = """
+<section>
+    <h1>Our Services</h1>
+    <ul>
+        <li><strong>Remote IT Support:</strong> Fast and efficient remote troubleshooting and assistance.</li>
+        <li><strong>On-Site Support:</strong> Professional technicians available for on-location service.</li>
+        <li><strong>Network Setup & Maintenance:</strong> Secure and scalable network infrastructure.</li>
+        <li><strong>Cybersecurity Solutions:</strong> Protection against threats with advanced security tools.</li>
+        <li><strong>Cloud Services:</strong> Migration, management, and optimization of cloud environments.</li>
+        <li><strong>Hardware & Software Support:</strong> Installation, configuration, and maintenance.</li>
+    </ul>
+</section>
+"""
+
+contact_content = """
+<section>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Reach out to us using the form below or through our contact details.</p>
+    <form>
+        <label>Name:<br><input type="text" name="name" required></label><br><br>
+        <label>Email:<br><input type="email" name="email" required></label><br><br>
+        <label>Message:<br><textarea name="message" rows="5" required></textarea></label><br><br>
+        <button type="submit">Send Message</button>
+    </form>
+    <p>Email: support@fetureprotech.com<br>Phone: +1-800-123-4567</p>
+</section>
+"""
+
+# Write each page to an HTML file
+with open("about.html", "w") as f:
+    f.write(header + about_content + footer)
+
+with open("services.html", "w") as f:
+    f.write(header + services_content + footer)
+
+with open("contact.html", "w") as f:
+    f.write(header + contact_content + footer)
+
+print("Additional pages (about.html, services.html, contact.html) have been created.")
+
